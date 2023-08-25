@@ -30,15 +30,13 @@ class BankAccount:
     def display_all_accounts_info(cls):
         for account in cls.all_accounts:
             account.display_account_info()
-    # Create 2 accounts
+    
 account1 = BankAccount(0.02, 1000)
 account2 = BankAccount(0.05, 500)
 
-# Chain operations for account1
+
 account1.deposit(100).deposit(200).deposit(300).withdraw(150).yield_interest().display_account_info()
 
-# Chain operations for account2
 account2.deposit(50).deposit(75).withdraw(30).withdraw(20).withdraw(10).withdraw(5).yield_interest().display_account_info()
 
-# Use classmethod to display all accounts' info
 BankAccount.display_all_accounts_info()
